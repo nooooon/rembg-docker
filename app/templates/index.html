@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlphaMatting</title>
+
+  <style>
+    body {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+    .out__wrap {
+      border: solid 1px #000;
+      max-width: 100%;
+      width: 600px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/png, image/jpeg">
+      <button type="submit">submit</button>
+    </form>
+
+    {% if image %}
+      <div class="out__wrap">
+        <img src="{{image}}" alt="">
+      </div>
+    {% endif %}
+  </div>
+</body>
+</html>
