@@ -5,3 +5,5 @@ rembg demo
 ```
 $ sh docker-run.sh
 ```
+
+Access: http://localhost/
